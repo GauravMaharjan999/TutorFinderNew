@@ -1,0 +1,45 @@
+﻿@model EmployeeViewModel;
+@{
+    ViewBag.Title = "Details";
+}
+
+
+
+<script src="~/lib/jquery/jquery.js"></script>
+<script src="~/lib/jquery/jquery.min.js"></script>
+<div>
+    <h3>@Model.PageTitle</h3>
+
+</div>
+
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div>   
+                <div class="card-header">
+                    <h1>@Model.Employee.Name</h1>
+
+
+
+                </div>
+            </div>
+            <div class="card-body-center">
+
+                <img src="~/images/profile.jpg" />
+                <h4>Employee ID : @Model.Employee.Id</h4>
+                <h4>Employee Email :@Model.Employee.Email</h4>
+                <h4>Employee Department :@Model.Employee.Department</h4>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="home" asp-action="index" class="btn btn-primary">Back</a>
+                <a asp-controller="home" asp-action="edit" asp-route-id="@Model.Employee.Id" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+
+
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+

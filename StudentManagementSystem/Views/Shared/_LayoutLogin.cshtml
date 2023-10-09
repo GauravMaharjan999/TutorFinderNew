@@ -1,0 +1,83 @@
+﻿
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Login Page   </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    @*<partial name="_LayoutPartialView" />*@
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="~/akkor/css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="~/akkor/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/akkor/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="~/akkor/css/all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="~/akkor/fonts/flaticon.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="~/akkor/css/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/akkor/style.css">
+
+    <!--izitoast Css-->
+    <link href="~/css/iziToast.css" rel="stylesheet" />
+
+    <!--toaster CSS-->
+    <link href="~/css/toastr.css" rel="stylesheet" />
+    <!-- Modernize js -->
+    <script src="~/akkor/js/modernizr-3.6.0.min.js"></script>
+    <script src="~/akkor/js/jquery-3.3.1.min.js"></script>
+
+
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+
+    <script src="~/js/iziToast.js"></script>
+    <script src="~/js/iziToast.min.js"></script>
+
+</head>
+
+<body>
+    @await Component.InvokeAsync("ClientNotifications.Notify")
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+    <!-- Login Page Start Here -->
+    @RenderBody()
+    <!-- Login Page End Here -->
+    @RenderSection("Scripts", required: false)
+    <!-- jquery-->
+    <script src="~/akkor/js/jquery-3.3.1.min.js"></script>
+    @* <script src="~/lib/jquery/jquery.js"></script>*@
+
+    <!--toaster js-->
+    <script src="~/js/toastr.js"></script>
+    <!-- Plugins js -->
+    <script src="~/akkor/js/plugins.js"></script>
+    <!-- Popper js -->
+    <script src="~/akkor/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="~/akkor/js/bootstrap.min.js"></script>
+    <!-- Scroll Up Js -->
+    <script src="~/akkor/js/jquery.scrollUp.min.js"></script>
+    <!-- Custom Js -->
+    <script src="~/akkor/js/main.js"></script>
+
+    <script src="~/js/iziToast.js"></script>
+    <script src="~/js/iziToast.min.js"></script>
+
+</body>
+
+</html>

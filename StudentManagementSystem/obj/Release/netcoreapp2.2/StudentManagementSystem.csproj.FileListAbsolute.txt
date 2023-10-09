@@ -1,0 +1,176 @@
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\bin\Release\netcoreapp2.2\appsettings.Development.json
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\bin\Release\netcoreapp2.2\appsettings.json
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\bin\Release\netcoreapp2.2\libman.json
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\bin\Release\netcoreapp2.2\StudentManagementSystem.deps.json
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\bin\Release\netcoreapp2.2\StudentManagementSystem.runtimeconfig.json
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\bin\Release\netcoreapp2.2\StudentManagementSystem.runtimeconfig.dev.json
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\bin\Release\netcoreapp2.2\StudentManagementSystem.dll
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\bin\Release\netcoreapp2.2\StudentManagementSystem.pdb
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\bin\Release\netcoreapp2.2\StudentManagementSystem.Views.dll
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\bin\Release\netcoreapp2.2\StudentManagementSystem.Views.pdb
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.csproj.AssemblyReference.cache
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.AssemblyInfoInputs.cache
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.AssemblyInfo.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.csproj.CoreCompileInputs.cache
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.RazorAssemblyInfo.cache
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.RazorAssemblyInfo.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.TagHelpers.input.cache
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.TagHelpers.output.cache
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.RazorCoreGenerate.cache
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Class\Create.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Class\Delete.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Class\Details.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Class\Edit.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Class\Index - Copy.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Class\Index.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Create - Copy (2).cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Create - Copy (3).cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Create - Copy.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Create.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Delete - Copy (2).cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Delete - Copy.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Delete.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Details.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Edit - Copy.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Edit.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Index - Copy (2).cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Index - Copy - Copy.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Index - Copy.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Index.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\IndexPartialView.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\UserRole\Create - Copy.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\UserRole\Create.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\UserRole\Details.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\UserRole\Index - Copy.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\UserRole\Index.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\UserRole\NotFound.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\User\Create.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\User\Delete.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\User\Details.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Account\ForgotPassword.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Account\Login - Copy.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Account\Login.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Account\Login1.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Account\Register - Copy.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Account\Register.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Administration\CreateRole.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Administration\EditRole.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Administration\ListRoles.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Administration\ListUsers.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Home\Create.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Home\Delete.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Home\Details.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Home\Edit.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Shared\Components\HeaderMenu\Default.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Shared\Components\MenuBar\Default.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Shared\_Layout - Copy.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Shared\_LayoutLogin.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Shared\_LayoutPartialView.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\User\ListUsers.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.RazorTargetAssemblyInfo.cache
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.RazorTargetAssemblyInfo.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.Views.pdb
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.dll
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.pdb
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.genruntimeconfig.cache
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.csproj.CopyComplete
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\appsettings.Development.json
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\appsettings.json
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\libman.json
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\StudentManagementSystem.deps.json
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\StudentManagementSystem.runtimeconfig.json
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\StudentManagementSystem.runtimeconfig.dev.json
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\StudentManagementSystem.dll
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\StudentManagementSystem.pdb
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\StudentManagementSystem.Views.dll
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\StudentManagementSystem.Views.pdb
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\BusinessLayer.dll
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\DataLayer.dll
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\Modellayer.dll
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\BusinessLayer.pdb
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\DataLayer.pdb
+E:\StudentManagement\StudentManagementSystem\bin\Release\netcoreapp2.2\Modellayer.pdb
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.csproj.AssemblyReference.cache
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.AssemblyInfoInputs.cache
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.AssemblyInfo.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.csproj.CoreCompileInputs.cache
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.RazorAssemblyInfo.cache
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.RazorAssemblyInfo.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.TagHelpers.input.cache
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.TagHelpers.output.cache
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.RazorCoreGenerate.cache
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Class\Create.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Class\Delete.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Class\Details.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Class\Edit.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Class\Index - Copy.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Class\Index.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\rough.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Create - Copy (2).cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Create - Copy (3).cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Create - Copy.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Create.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Delete - Copy (2).cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Delete - Copy.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Delete.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Details.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Edit - Copy.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Edit.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Index - Copy (2).cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Index - Copy - Copy.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Index - Copy.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\Index.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\Student\IndexPartialView.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\UserRole\Create - Copy.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\UserRole\Create.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\UserRole\Details.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\UserRole\Index - Copy.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\UserRole\Index.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\UserRole\NotFound.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\User\Create.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\User\Delete.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\User\Details.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Account\ForgotPassword.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Account\Login - Copy.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Account\Login.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Account\Login1.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Account\Register - Copy.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Account\Register.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Administration\CreateRole.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Administration\EditRole.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Administration\ListRoles.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Administration\ListUsers.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Home\Create.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Home\Delete.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Home\Details.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Home\Edit.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Shared\Components\HeaderMenu\Default.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Shared\Components\MenuBar\Default.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Shared\_Layout - Copy.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Shared\_LayoutLogin.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\Shared\_LayoutPartialView.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\User\ListUsers.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.RazorTargetAssemblyInfo.cache
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.RazorTargetAssemblyInfo.cs
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.Views.pdb
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.csproj.CopyComplete
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.dll
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.pdb
+E:\StudentManagement\StudentManagementSystem\obj\Release\netcoreapp2.2\StudentManagementSystem.genruntimeconfig.cache

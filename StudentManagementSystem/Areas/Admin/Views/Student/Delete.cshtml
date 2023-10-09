@@ -1,0 +1,175 @@
+﻿@model StudentViewModel;
+
+@{
+    ViewBag.Title = "Delete Student";
+
+    var i = 0;
+}
+
+<div class="breadcrumbs-area">
+    <h3>Students</h3>
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>Student Admit Form</li>
+    </ul>
+</div>
+<!-- Breadcubs Area End Here -->
+<!-- Admit Form Area Start Here -->
+<div class="card height-auto">
+    <div class="card-body">
+        <div class="heading-layout1">
+            <div class="item-title">
+                <h3>Delete Student</h3>
+            </div>
+            <div class="dropdown">
+                <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                   aria-expanded="false">...</a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-times text-orange-red"></i>Close
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-cogs text-dark-pastel-green"></i>Edit
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-redo-alt text-orange-peel"></i>Refresh
+                    </a>
+                </div>
+            </div>
+        </div>
+        <form asp-controller="student" asp-action="delete" method="post" data-ajax="true"
+                               data-ajax-method="POST" data-ajax-mode="replace"
+                               data-ajax-update="#main-div" class="new-added-form">
+            <input asp-for="Id" hidden/>
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>First Name *</label>
+                    <input type="text" placeholder="" asp-for="FirstName" class="form-control" readonly>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Last Name *</label>
+                    <input type="text" placeholder="" asp-for="LastName" class="form-control" readonly>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Gender *</label>
+                    <input asp-for="Gender" type="text" placeholder="" class="form-control" readonly>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Date Of Birth *</label>
+                    <input asp-for="BirthDate" type="text" placeholder="dd/mm/yyyy" class="form-control air-datepicker"
+                           data-position='bottom right' readonly>
+                    <i class="far fa-calendar-alt"></i>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Roll</label>
+                    <input asp-for="RollNo" type="text" placeholder="" class="form-control" readonly>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Blood Group *</label>
+                    <input asp-for="BloodGroup" type="text" placeholder="" class="form-control" readonly>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label asp-for="Class">Class *</label>
+                    <input asp-for="Class" type="text" placeholder="" class="form-control" readonly>
+                </div>
+
+
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Phone</label>
+                    <input asp-for="MobileNumber" type="text" placeholder="" class="form-control">
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Address</label>
+                    <input asp-for="Address" type="text" placeholder="" class="form-control">
+                </div>
+             
+
+                @*Student Academic part*@
+
+                <div class="col-sm-12 height-auto">
+                    <table class="table table-bordered table-hover height-auto">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label asp-for="StudentAcademicList[0].BoardId" class="ast">
+                                        BoardName
+                                    </label>
+                                </th>
+                                <th>
+                                    <label asp-for="StudentAcademicList[0].College" class="ast"></label>
+                                </th>
+                                <th>
+
+
+                                    <label asp-for="StudentAcademicList[0].Percentage" class="ast"></label>
+                                </th>
+                                <th>
+
+
+                                    <label asp-for="StudentAcademicList[0].Division" class="ast"></label>
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+            @foreach (var item in Model.StudentAcademicList)
+            {
+
+            
+                                <tr>
+                                    <td>
+                                        <input asp-for="StudentAcademicList[i].BoardId" class="height-auto" style="border:none" readonly>
+
+                                    </td>
+                                    <td>
+                                        @*@Html.TextBoxFor(x => x.StudentAcademicList[i].College, new { htmlAttributes = new { @class = "form-control " } })*@
+                                        <input asp-for="StudentAcademicList[i].College" class="height-auto" placeholder="College / School " style="border:none" readonly>
+                                    </td>
+                                    <td>
+                                        @*  @Html.TextBoxFor(x => x.StudentAcademicList[i].Percentage, new { htmlAttributes = new { @class = "form-control " } })*@
+
+                                        <input asp-for="StudentAcademicList[i].Percentage" class="height-auto" placeholder="Enter your percentage" type="number" style="border:none" readonly>
+                                    </td>
+                                    <td>
+
+                                        @*@Html.EditorFor(x => x.StudentAcademicList[i].Division, new { htmlAttributes = new { @class = "form-control " } })*@
+                                        @*<input asp-for="StudentAcademicList[i].Division" class="form-control" placeholder="Enter your Division">*@
+
+                                        <div>
+
+                                            <input asp-for="StudentAcademicList[i].Division" class="height-auto" style="border:none" readonly>
+
+
+                                            
+                                        </div>
+                                    </td>
+                                </tr>
+                i++;
+            }
+
+                        </tbody>
+
+
+
+                    </table>
+                </div>
+
+
+
+
+                <div class="col-12 form-group mg-t-8">
+                    <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Delete</button>
+                    <a  asp-controller="Student" asp-action="Index" data-ajax="true"
+                           data-ajax-method="GET" data-ajax-mode="replace"
+                           data-ajax-update="#main-div" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Admit Form Area End Here -->

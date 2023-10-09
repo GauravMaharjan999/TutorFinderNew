@@ -1,0 +1,15 @@
+E:\StudentManagement\BusinessLayer\bin\Release\netcoreapp2.2\BusinessLayer.deps.json
+E:\StudentManagement\BusinessLayer\bin\Release\netcoreapp2.2\BusinessLayer.dll
+E:\StudentManagement\BusinessLayer\bin\Release\netcoreapp2.2\BusinessLayer.pdb
+E:\StudentManagement\BusinessLayer\bin\Release\netcoreapp2.2\DataLayer.dll
+E:\StudentManagement\BusinessLayer\bin\Release\netcoreapp2.2\Modellayer.dll
+E:\StudentManagement\BusinessLayer\bin\Release\netcoreapp2.2\DataLayer.pdb
+E:\StudentManagement\BusinessLayer\bin\Release\netcoreapp2.2\Modellayer.pdb
+E:\StudentManagement\BusinessLayer\obj\Release\netcoreapp2.2\BusinessLayer.csproj.AssemblyReference.cache
+E:\StudentManagement\BusinessLayer\obj\Release\netcoreapp2.2\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\StudentManagement\BusinessLayer\obj\Release\netcoreapp2.2\BusinessLayer.AssemblyInfoInputs.cache
+E:\StudentManagement\BusinessLayer\obj\Release\netcoreapp2.2\BusinessLayer.AssemblyInfo.cs
+E:\StudentManagement\BusinessLayer\obj\Release\netcoreapp2.2\BusinessLayer.csproj.CoreCompileInputs.cache
+E:\StudentManagement\BusinessLayer\obj\Release\netcoreapp2.2\BusinessLayer.csproj.CopyComplete
+E:\StudentManagement\BusinessLayer\obj\Release\netcoreapp2.2\BusinessLayer.dll
+E:\StudentManagement\BusinessLayer\obj\Release\netcoreapp2.2\BusinessLayer.pdb

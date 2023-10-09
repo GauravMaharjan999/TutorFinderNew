@@ -1,0 +1,559 @@
+﻿
+@model StudentViewModel
+
+
+@{
+    ViewBag.Title = "Create Student";
+}
+
+
+@{ Layout = ViewBag.Layout;
+
+    var counter = 1;
+    }
+
+
+@*<link rel="stylesheet" href="~/akkor/css/select2.min.css">*@
+<!-- Breadcubs Area Start Here -->
+<div class="breadcrumbs-area">
+    <h3>Students</h3>
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>Student Admit Form</li>
+    </ul>
+</div>
+<!-- Admit Form Area Start Here -->
+<div class="card height-auto">
+    <div class="card-body">
+        <div class="heading-layout1">
+            <div class="item-title">
+                <h3>Add New Students</h3>
+            </div>
+            <div class="dropdown">
+                <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                   aria-expanded="false">...</a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" asp-action="index" asp-controller="student" data-ajax="true"
+                       data-ajax-method="GET" data-ajax-mode="replace"
+                       data-ajax-update="#main-div">
+                        <i class="fas fa-times text-orange-red"></i>Close
+                    </a>
+                    @*<a class="dropdown-item" href="#">
+                            <i class="fas fa-cogs text-dark-pastel-green"></i>Edit
+                        </a>*@
+                    <a class="dropdown-item" asp-action="create" asp-controller="student" data-ajax="true"
+                       data-ajax-method="GET" data-ajax-mode="replace"
+                       data-ajax-update="#main-div">
+                        <i class="fas fa-redo-alt text-orange-peel"></i>Refresh
+                    </a>
+                </div>
+            </div>
+        </div>
+        <form enctype="multipart/form-data" id="createStudentForm" asp-area="admin" asp-controller="student" asp-action="create" method="post" class="new-added-form">
+
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>First Name *</label>
+                    <input type="text" placeholder="" asp-for="FirstName" class="form-control">
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Middle Name</label>
+                    <input type="text" placeholder="" asp-for="MiddleName" class="form-control">
+                    <span asp-validation-for="MiddleName" class="text-danger"></span>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Last Name *</label>
+                    <input type="text" placeholder="" asp-for="LastName" class="form-control">
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Gender *</label>
+                    <select class="select2" asp-for="Gender">
+                        <option value="" disabled selected>Please Select Gender *</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Others</option>
+                    </select>
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Date Of Birth *</label>
+                    <input asp-for="BirthDate" type="text" placeholder="dd/mm/yyyy" class="form-control air-datepicker" data-position="bottom right">
+                    <span asp-validation-for="BirthDate" class="text-danger"></span>
+                    <i class="far fa-calendar-alt"></i>
+
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Roll*</label>
+                    <input asp-for="RollNo" type="number" placeholder="" class="form-control">
+                    <span asp-validation-for="RollNo" class="text-danger"></span>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label asp-for="BloodGroup">Blood Group *</label>
+                    <select asp-for="BloodGroup" class="custom-select mr-sm-3 select2"
+                            asp-items="Html.GetEnumSelectList<BloodGroupEnum>()"></select>
+                    @*<select asp-for="BloodGroup" class="select2">
+                            <option value="" disabled selected>Please Select Group *</option>
+                            <option value="1">A+</option>
+                            <option value="2">A-</option>
+                            <option value="3">B+</option>
+                            <option value="3">B-</option>
+                            <option value="3">O+</option>
+                            <option value="3">O-</option>
+                        </select>*@
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Class *</label>
+                    <select asp-for="Class" class="select2" style="width:190px">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <span asp-validation-for="Class" class="text-danger"></span>
+                </div>
+
+
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Phone</label>
+                    <input asp-for="MobileNumber" type="text" placeholder="" class="form-control">
+                    <span asp-validation-for="MobileNumber" class="text-danger"></span>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                    <label>Address</label>
+                    <input asp-for="Address" type="text" placeholder="" class="form-control">
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+
+                @* <div class="col-lg-6 col-12 form-group mg-t-30">
+                        <form enctype="multipart/form-data" asp-controller="Student" asp-action="create" method="post">
+
+                            <label class="text-dark-medium">Upload Student Photo (150px X 150px)</label>
+                            <input id="photoInput" asp-for="PhotoInput" type="file" accept="image/*" class="form-control-file">
+
+
+                            <button type="submit" id="photoSubmit" hidden></button>
+
+                        </form>
+
+                    </div>
+                *@
+
+
+                <div class="col-lg-6 col-12 form-group mg-t-30">
+
+                    <label class="text-dark-medium">Upload Student Photo (150px X 150px)</label>
+                    <input id="photoInput" asp-for="PhotoInput" type="file" accept="image/*" class="form-control-file">
+
+                    @*
+                        <button type="submit" id="photoSubmit" hidden></button>*@
+
+
+                </div>
+
+
+
+
+                @* <div class="col-lg-6 col-12 form-group mg-t-30">
+                        <label>Employee List</label>
+
+                        <select asp-for="EmployeeId" class="custom-select mr-sm-3 select2"
+                                asp-items="@(new SelectList(ViewBag.EmployeeList,nameof(ViewBag.EmployeeList.Id),nameof(ViewBag.EmployeeList.Name)))"></select>
+
+
+
+                    </div>*@
+
+
+
+
+                @*Start of student academic table*@
+                <div class="container">
+                    <table id="myTable" class=" table order-list">
+                        <thead>
+                            <tr>
+                                <td>Board Name*</td>
+                                <td>College*</td>
+                                <td>Percentage*</td>
+                                <td>Division*</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @* <select class="custom-select height-auto" style="border:none" asp-for="StudentAcademicList[0].BoardId" asp-items="Html.GetEnumSelectList<BoardEnum>()"></select>*@
+
+
+                                    <select class="custom-select height-auto" style="border:none" asp-for="StudentAcademicList[0].BoardId">
+                                        <option value="1">NEB</option>
+                                        <option value="2">HSEB</option>
+                                        <option value="3">Bachelor</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    @*@Html.TextBoxFor(x => x.StudentAcademicList[i].College, new { htmlAttributes = new { @class = "form-control " } })*@
+                                    <input asp-for="StudentAcademicList[0].College" class="form-height-auto" style="border:none" placeholder="College / School">
+                                    <span asp-validation-for="StudentAcademicList[0].College" class="text-danger text-8"></span>
+                                </td>
+                                <td>
+                                    @*  @Html.TextBoxFor(x => x.StudentAcademicList[i].Percentage, new { htmlAttributes = new { @class = "form-control " } })*@
+
+                                    <input asp-for="StudentAcademicList[0].Percentage" class="form-height-auto" style="border:none" placeholder="Enter your percentage" type="number">
+                                    <span asp-validation-for="StudentAcademicList[0].Percentage" class="text-danger text-8"></span>
+                                </td>
+                                <td>
+
+                                    @*@Html.EditorFor(x => x.StudentAcademicList[i].Division, new { htmlAttributes = new { @class = "form-control " } })*@
+                                    @*<input asp-for="StudentAcademicList[i].Division" class="form-control" placeholder="Enter your Division">*@
+
+                                    <div>
+
+                                        <select asp-for="StudentAcademicList[0].Division" class="height-auto" style="border:none">
+                                            <option value="Distinction">Distinction</option>
+                                            <option value="1st division">1st division</option>
+                                            <option value="2nd division">2nd division</option>
+                                            <option value="3rd division">3rd division</option>
+
+                                        </select>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            @if (Model.StudentAcademicList != null)
+                            {
+                                @if (Model.StudentAcademicList.Count > 0)
+                                {
+                                    for (int i = 1; i < Model.StudentAcademicList.Count; i++)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @* <select class="custom-select height-auto" style="border:none" asp-for="StudentAcademicList[0].BoardId" asp-items="Html.GetEnumSelectList<BoardEnum>()"></select>*@
+
+
+                                                <select class="custom-select height-auto" style="border:none" asp-for="StudentAcademicList[counter].BoardId">
+                                                    <option value="1">NEB</option>
+                                                    <option value="2">HSEB</option>
+                                                    <option value="3">Bachelor</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                @*@Html.TextBoxFor(x => x.StudentAcademicList[i].College, new { htmlAttributes = new { @class = "form-control " } })*@
+                                                <input asp-for="StudentAcademicList[counter].College" class="form-height-auto" style="border:none" placeholder="College / School">
+                                                <span asp-validation-for="StudentAcademicList[counter].College" class="text-danger text-8"></span>
+                                            </td>
+                                            <td>
+                                                @*  @Html.TextBoxFor(x => x.StudentAcademicList[i].Percentage, new { htmlAttributes = new { @class = "form-control " } })*@
+
+                                                <input asp-for="StudentAcademicList[counter].Percentage" class="form-height-auto" style="border:none" placeholder="Enter your percentage" type="number">
+                                                <span asp-validation-for="StudentAcademicList[counter].Percentage" class="text-danger text-8"></span>
+                                            </td>
+                                            <td>
+
+                                                @*@Html.EditorFor(x => x.StudentAcademicList[i].Division, new { htmlAttributes = new { @class = "form-control " } })*@
+                                                @*<input asp-for="StudentAcademicList[i].Division" class="form-control" placeholder="Enter your Division">*@
+
+                                                <div>
+
+                                                    <select asp-for="StudentAcademicList[counter].Division" class="height-auto" style="border:none">
+                                                        <option value="Distinction">Distinction</option>
+                                                        <option value="1st division">1st division</option>
+                                                        <option value="2nd division">2nd division</option>
+                                                        <option value="3rd division">3rd division</option>
+
+                                                    </select>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        counter = counter + 1;
+                                    }
+
+                                }
+                            }
+
+<tfoot>
+                            <tr>
+                                <td colspan="5" style="text-align: left;">
+                                    <input type="button" class="btn btn-lg btn-block " id="addrow" value="Add Row" />
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="col-12 form-group mg-t-8">
+                    <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Create</button>
+                    @*     <button id="createBtn" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Create USING AJAX</button>*@
+                    <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Reset</button>
+                    <a asp-area="admin" asp-controller="student" asp-action="Index" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Back</a>
+
+                </div>
+            </div>
+
+
+        </form>
+        @*<div class="col-lg-6 col-12 form-group mg-t-30">
+                <label class="text-dark-medium">Upload Student Photo (150px X 150px)</label>
+                <form enctype="multipart/form-data" asp-area="admin" asp-controller="student" asp-action="Create" method="post">
+
+                    <input id="photoInput" asp-for="PhotoInput" type="file" accept="image/*" class="form-control-file">
+
+
+                    <button type="submit" id="photoSubmit" hidden></button>
+                </form>
+            </div>*@
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+<!-- Admit Form Area End Here -->
+
+
+
+
+
+
+
+<script>
+    $('.select2').select2();
+</script>
+<script>
+    $('.air-datepicker').datepicker({
+        language: {
+            days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+            daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+            months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            today: 'Today',
+            clear: 'Clear',
+            dateFormat: 'dd/mm/yyyy',
+            firstDay: 0
+        }
+    });
+</script>
+
+
+
+
+<script>
+    $(document).ready(function () {
+        
+        $("#photoInput").change(function () {
+            $("#photoSubmit").click();
+        });
+    });
+</script>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        
+    var counter = @counter;
+
+        $("#addrow").on("click", function () {
+            $(".ibtnDel").hide()
+            
+            var newRow = $("<tr>");
+            var cols = "";
+
+            cols += '<td><select class="custom-select height-auto" style="border:none" data-val="true" data-val-required="The BoardId field is required." id="StudentAcademicList_' + counter + '__BoardId" name="StudentAcademicList[' + counter + '].BoardId"><option value= "1" > NEB</option><option value ="2">HSEB</option><option value="3">Bachelor</option></select></td>';
+            cols += '<td><input class="form-height-auto" style="border:none" placeholder="College / School" type="text" data-val="true" data-val-required="The College field is required." id="StudentAcademicList_' + counter + '__College" name="StudentAcademicList[' + counter + '].College" value=""></td>';
+            cols += '<td><input class="form-height-auto" style="border:none" placeholder="Enter your percentage" type="number" data-val="true" data-val-number="The field Percentage must be a number." data-val-required="The Percentage field is required." id="StudentAcademicList_' + counter + '__Percentage" name="StudentAcademicList[' + counter + '].Percentage" value=""></td>';
+            cols += '<td><div><select class="height-auto" style="border:none" data-val="true" data-val-required="The Division field is required." id="StudentAcademicList_' + counter + '__Division" name="StudentAcademicList[' + counter + '].Division"><option value="Distinction">Distinction</option><option value="1st division">1st division</option><option value="2nd division">2nd division</option><option value="3rd division">3rd division</option></select></div></td>';
+
+
+
+            cols += '<td><input type="button" class="ibtnDel btn btn-md btn-danger " data-id=' + counter + '  value="Delete"></td>';
+
+            cols += '</tr>';
+            newRow.append(cols);
+            $("table.order-list").append(newRow);
+            counter++;
+        });
+
+
+
+        $("table.order-list").on("click", ".ibtnDel", function (event) {
+            
+            $(this).closest("tr").remove();
+            counter -= 1
+            var buttonDeleteCount = counter - 1;
+            $(".ibtnDel[data-id='" + buttonDeleteCount+"']").show();
+        });
+
+
+    });
+
+
+
+    function calculateRow(row) {
+        var price = +row.find('input[name^="price"]').val();
+
+    }
+
+    function calculateGrandTotal() {
+        var grandTotal = 0;
+        $("table.order-list").find('input[name^="price"]').each(function () {
+            grandTotal += +$(this).val();
+        });
+        $("#grandtotal").text(grandTotal.toFixed(2));
+    }
+</script>
+
+<script>
+
+    $(document).ready(function () {
+        
+
+
+
+        $("#createBtn").click(function () {
+            var data = $("#studentAcademicList").serializeArray();
+
+
+            /* var studentAcademicList = new Array($('#StudentAcademicList_0__College'), $('#el2'), $('#el3'));*/
+
+            var DataList = [];
+
+            @*DataList.push(
+                {
+                id:board0,
+                BoardName: $("#StudentAcademicList_0__BoardId").val()
+                },
+                {
+                    id:board1,
+                    BoardName: $("#StudentAcademicList_0__BoardId").val()
+                },
+                {
+                    id:board2,
+                    BoardName: $("#StudentAcademicList_0__BoardId").val()
+                },
+                {
+                    id: college0,
+                    BoardName: $("#StudentAcademicList_0__College").val()
+                },
+                {
+                    id: college1,
+                    BoardName: $("#StudentAcademicList_1__College").val()
+                },
+                {
+                    id: college3,
+                    BoardName: $("#StudentAcademicList_2__College").val()
+                },
+
+            );*@
+            var model =
+            {
+                FirstName: "",
+                MiddleName: "",
+                LastName:"",
+                RollNo : "",
+                Address : "",
+                Class : "",
+                BloodGroup : "",
+                MobileNumber : "",
+                BirthDate : "",
+                Gender : "",
+
+                StudentAcademicList:[]
+            };
+
+            var gridEducationDetail0 = {};
+            gridEducationDetail0.BoardId = $("#StudentAcademicList_0__BoardId").val();
+            gridEducationDetail0.College = $("#StudentAcademicList_0__College").val();
+            gridEducationDetail0.Percentage = $("#StudentAcademicList_0__Percentage").val();
+            gridEducationDetail0.Division = $("#StudentAcademicList_0__Division").val();
+            model.StudentAcademicList.push(gridEducationDetail0);
+
+            var gridEducationDetail1 = {};
+            gridEducationDetail1.BoardId = $("#StudentAcademicList_1__BoardId").val();
+            gridEducationDetail1.College = $("#StudentAcademicList_1__College").val();
+            gridEducationDetail1.Percentage = $("#StudentAcademicList_1__Percentage").val();
+            gridEducationDetail1.Division = $("#StudentAcademicList_1__Division").val();
+            model.StudentAcademicList.push(gridEducationDetail1);
+
+            var gridEducationDetail2 = {};
+            gridEducationDetail2.BoardId = $("#StudentAcademicList_2__BoardId").val();
+            gridEducationDetail2.College = $("#StudentAcademicList_2__College").val();
+            gridEducationDetail2.Percentage = $("#StudentAcademicList_2__Percentage").val();
+            gridEducationDetail2.Division = $("#StudentAcademicList_2__Division").val();
+            model.StudentAcademicList.push(gridEducationDetail2);
+
+
+
+
+            model.FirstName = $("#FirstName").val();
+
+                model.MiddleName= $("#MiddleName").val();
+
+                model.LastName= $("#LastName").val();
+                model.RollNo= $("#RollNo").val();
+                model.Address= $("#Address").val();
+                model.Class= $("#Class").val();
+                model.BloodGroup= $("#BloodGroup").val();
+                model.MobileNumber= $("#MobileNumber").val();
+                model.BirthDate= $("#BirthDate").val();
+                model.Gender= $("#Gender").val();
+
+            StudentAcademicList = [gridEducationDetail0, gridEducationDetail1, gridEducationDetail2];
+
+
+
+
+            
+            if (model.FirstName == "" && model.FirstName ==null ) {
+                function (result) {
+                    alert('First name lekheko xaina hai');
+                    console.log(result);
+                }
+            }
+            else {
+
+            }
+            $.ajax({
+
+
+                type: 'POST',
+                url: '/admin/Student/Create',
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8;', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+                data: model,
+                success: function (result) {
+                    alert('Successfully received Data ');
+                    console.log(result);
+                },
+                error: function () {
+                    alert('Failed to receive the Data');
+                    console.log('Failed ');
+                }
+            }
+            )
+        })
+
+    })
+</script>
+

@@ -1,0 +1,60 @@
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\bin\Debug\netcoreapp2.2\BusinessLayer.deps.json
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\bin\Debug\netcoreapp2.2\BusinessLayer.dll
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\bin\Debug\netcoreapp2.2\BusinessLayer.pdb
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\bin\Debug\netcoreapp2.2\DataLayer.dll
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\bin\Debug\netcoreapp2.2\Modellayer.dll
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\bin\Debug\netcoreapp2.2\DataLayer.pdb
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\bin\Debug\netcoreapp2.2\Modellayer.pdb
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.csproj.AssemblyReference.cache
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.AssemblyInfoInputs.cache
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.AssemblyInfo.cs
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.csproj.CoreCompileInputs.cache
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.csproj.CopyComplete
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.dll
+F:\INTERN PROJECTS\StudentManagementSystem_dotnetinternproject\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.pdb
+E:\StudentManagement\BusinessLayer\bin\Debug\netcoreapp2.2\BusinessLayer.deps.json
+E:\StudentManagement\BusinessLayer\bin\Debug\netcoreapp2.2\BusinessLayer.dll
+E:\StudentManagement\BusinessLayer\bin\Debug\netcoreapp2.2\BusinessLayer.pdb
+E:\StudentManagement\BusinessLayer\bin\Debug\netcoreapp2.2\DataLayer.dll
+E:\StudentManagement\BusinessLayer\bin\Debug\netcoreapp2.2\Modellayer.dll
+E:\StudentManagement\BusinessLayer\bin\Debug\netcoreapp2.2\DataLayer.pdb
+E:\StudentManagement\BusinessLayer\bin\Debug\netcoreapp2.2\Modellayer.pdb
+E:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.csproj.AssemblyReference.cache
+E:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.AssemblyInfoInputs.cache
+E:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.AssemblyInfo.cs
+E:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.csproj.CoreCompileInputs.cache
+E:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.csproj.CopyComplete
+E:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.dll
+E:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.pdb
+G:\StudentManagement\BusinessLayer\bin\Debug\netcoreapp2.2\BusinessLayer.deps.json
+G:\StudentManagement\BusinessLayer\bin\Debug\netcoreapp2.2\BusinessLayer.dll
+G:\StudentManagement\BusinessLayer\bin\Debug\netcoreapp2.2\BusinessLayer.pdb
+G:\StudentManagement\BusinessLayer\bin\Debug\netcoreapp2.2\DataLayer.dll
+G:\StudentManagement\BusinessLayer\bin\Debug\netcoreapp2.2\Modellayer.dll
+G:\StudentManagement\BusinessLayer\bin\Debug\netcoreapp2.2\DataLayer.pdb
+G:\StudentManagement\BusinessLayer\bin\Debug\netcoreapp2.2\Modellayer.pdb
+G:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.csproj.AssemblyReference.cache
+G:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+G:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.AssemblyInfoInputs.cache
+G:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.AssemblyInfo.cs
+G:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.csproj.CoreCompileInputs.cache
+G:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.csproj.CopyComplete
+G:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.dll
+G:\StudentManagement\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.pdb
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\bin\Debug\netcoreapp2.2\BusinessLayer.deps.json
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\bin\Debug\netcoreapp2.2\BusinessLayer.dll
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\bin\Debug\netcoreapp2.2\BusinessLayer.pdb
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\bin\Debug\netcoreapp2.2\DataLayer.dll
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\bin\Debug\netcoreapp2.2\Modellayer.dll
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\bin\Debug\netcoreapp2.2\DataLayer.pdb
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\bin\Debug\netcoreapp2.2\Modellayer.pdb
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.csproj.AssemblyReference.cache
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.AssemblyInfoInputs.cache
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.AssemblyInfo.cs
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.csproj.CoreCompileInputs.cache
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.csproj.CopyComplete
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.dll
+G:\Studentmgmt\TutorFinderNew\BusinessLayer\obj\Debug\netcoreapp2.2\BusinessLayer.pdb

@@ -1,0 +1,161 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    @*    <partial name="_LayoutPartialView" />*@
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link href="~/lib/jquery-ui/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link href="~/paramquery-2.3.0/pqgrid.min.css" rel="stylesheet" />
+    @*<link href="~/lib/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" />*@
+
+
+    <link href="~/css/Asterisk.css" rel="stylesheet" />
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="~/akkor/css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="~/akkor/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/akkor/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="~/akkor/css/all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="~/akkor/fonts/flaticon.css">
+    <!-- Full Calender CSS -->
+    <link rel="stylesheet" href="~/akkor/css/fullcalendar.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="~/akkor/css/animate.min.css">
+    <!-- Data Table CSS -->
+    <link rel="stylesheet" href="~/akkor/css/jquery.dataTables.min.css">
+    <!-- Select 2 CSS -->
+    <link rel="stylesheet" href="~/akkor/css/select2.min.css">
+    <!-- Date Picker CSS -->
+    <link rel="stylesheet" href="~/akkor/css/datepicker.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/akkor/style.css">
+    <link href="~/css/LoaderGif.css" rel="stylesheet" />
+
+  
+    <link href="~/css/sweet-alert.css" rel="stylesheet" />
+    <!--toaster CSS-->
+    <link href="~/css/toastr.css" rel="stylesheet" />
+
+    <script src="~/akkor/js/jquery-3.3.1.min.js"></script>
+
+    <!-- Modernize js -->
+    <script src="~/akkor/js/modernizr-3.6.0.min.js"></script>
+
+
+    <!-- Date Picker Js -->
+    <script src="~/akkor/js/datepicker.min.js"></script>
+
+    <script src="~/lib/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+    <!--izitoast Css-->
+    <link href="~/css/iziToast.css" rel="stylesheet" />
+
+
+    @*<link href="~/paramquery-2.3.0/pqgrid.dev.css" rel="stylesheet" />*@
+
+    <script src="~/paramquery-2.3.0/pqgrid.min.js"></script>
+    @*<script src="~/paramquery-2.3.0/pqgrid.dev.js"></script>*@
+
+
+    <script src="~/js/iziToast.js"></script>
+    <script src="~/js/iziToast.min.js"></script>
+
+
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajax-unobtrusive/3.2.6/jquery.unobtrusive-ajax.js"></script>
+
+
+
+
+    <title>Gaurav's Website</title>
+
+
+</head>
+<body>
+    @await Component.InvokeAsync("ClientNotifications.Notify")
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+    <div id="wrapper" class="wrapper bg-ash">
+        <!-- Header Menu Area Start Here -->
+        @await Component.InvokeAsync("HeaderMenu")
+        <!-- Header Menu Area End Here -->
+        <!-- Page Area Start Here -->
+        <div class="dashboard-page-one" style="padding-top: 5%; height:1000px ">
+            <!-- Sidebar Area Start Here -->
+            @await Component.InvokeAsync("MenuBar")
+            <!-- Sidebar Area End Here -->
+            <div class="dashboard-content-one" id="main-div">
+
+
+                @RenderBody()
+            </div>
+            @if (IsSectionDefined("Scripts"))
+            {
+                @RenderSection("Scripts", required: false);
+            }
+        </div>
+        <!-- Page Area End Here -->
+    </div>
+
+
+    @*
+        <div id="divLoading" class="divhide">
+
+            <img src="~/akkor/img/preloader.gif" alt="Loader" />
+        </div>
+    *@
+    <script src="~/js/sweetalert.min.js"></script>
+    <!--toaster js-->
+    <script src="~/js/toastr.js"></script>
+    <!-- Plugins js -->
+    <script src="~/akkor/js/plugins.js"></script>
+    <!-- Popper js -->
+    <script src="~/akkor/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="~/akkor/js/bootstrap.min.js"></script>
+    <!-- Counterup Js -->
+    <script src="~/akkor/js/jquery.counterup.min.js"></script>
+    <!-- Moment Js -->
+    <script src="~/akkor/js/moment.min.js"></script>
+
+    <!-- Waypoints Js -->
+    <script src="~/akkor/js/jquery.waypoints.min.js"></script>
+
+    <script src="~/akkor/js/select2.min.js"></script>
+
+    <!-- Smoothscroll Js -->
+    <script src="~/akkor/js/jquery.smoothscroll.min.js"></script>
+
+    <!-- Scroll Up Js -->
+    <script src="~/akkor/js/jquery.scrollUp.min.js"></script>
+
+    <!-- Full Calender Js -->
+    <script src="~/akkor/js/fullcalendar.min.js"></script>
+    <!-- Chart Js -->
+    <script src="~/akkor/js/Chart.min.js"></script>
+    <!-- Data Table Js -->
+    <script src="~/akkor/js/jquery.dataTables.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="~/akkor/js/main.js"></script>
+
+    <script src="~/js/Dashboard.js"></script>
+
+</body>
+</html>
+
+
+
+

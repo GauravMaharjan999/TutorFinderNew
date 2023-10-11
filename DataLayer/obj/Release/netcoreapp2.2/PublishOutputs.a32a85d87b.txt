@@ -1,3 +1,0 @@
-E:\StudentManagement\publish\DataLayer.dll
-E:\StudentManagement\publish\DataLayer.deps.json
-E:\StudentManagement\publish\DataLayer.pdb

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<IdentityUser>
+
+@{ 
+    ViewBag.Title = "List Users";
+}
+
+<h1>@ViewBag.Title</h1>
+@if (Model.Any()) { 
+    <div class="table-responsive">
+    <table class="table display data-table text-nowrap" id="myTable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>User Name</th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.Email</td>
+
+
+                    <td>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                               aria-expanded="false">
+                                <span class="flaticon-more-button-of-three-dots"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+
+                                <a class="dropdown-item" asp-controller="student" asp-action="edit" asp-route-id="@user.Id">
+                                    <i class="fas fa-cogs text-dark-pastel-green"></i>Edit
+                                </a>
+                                <a class="dropdown-item" asp-controller="student" asp-action="details" asp-route-id="@user.Id">
+                                    <i class="fas fa-redo-alt text-orange-peel"></i>Detail
+                                </a>
+                                <a class="dropdown-item" asp-controller="student" asp-action="delete" asp-route-id="@user.Id">
+
+                                    <i class="fas fa-times text-orange-red"></i>Delete
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+}
+
+
+        </tbody>
+    </table>
+</div>
+}
+

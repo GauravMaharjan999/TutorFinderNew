@@ -1,0 +1,348 @@
+﻿@inject SignInManager<IdentityUser> signInManager
+<div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
+    <div class="mobile-sidebar-header d-md-none">
+        <div class="header-logo">
+            <a href="index.html"><img src="img/logo1.png" alt="logo"></a>
+        </div>
+    </div>
+    <div class="sidebar-menu-content" style=" position: fixed; overflow-x: auto; width:260px ">
+        <ul class="nav nav-sidebar-menu sidebar-toggle-view">
+            <li class="nav-item sidebar-nav-item">
+
+                <input@* class="nav-link"*@ type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="padding: 12px 33px; border: none; position: fixed; z-index: 10; ">
+
+            </li>
+        </ul>
+
+        <ul class="nav nav-sidebar-menu sidebar-toggle-view" id="myUL" style="margin-top: 50px;">
+
+            @*   <li class="nav-item sidebar-nav-item">
+
+
+                    <input class="" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+
+
+        </li>*@
+            <li class="nav-item sidebar-nav-item">
+                <a href="#" class="nav-link"> <i class="flaticon-dashboard"></i><span>Dashboard</span></a>
+
+                <ul class="nav sub-group-menu">
+                    <li class="nav-item ">
+                        <a href="/admin/student/index"
+                           id="#studentIndex"
+                           data-ajax="true"
+                           data-ajax-method="GET" data-ajax-mode="replace"
+                           data-ajax-update="#main-div"
+                           class="nav-link"><i class="fas fa-angle-right"></i>Student</a>
+                        @* data-ajax-begin="onAjaxBegin" data-ajax-complete="onAjaxComplete" data-ajax-loading="#divLoading" *@
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="Admin" asp-controller="Class" asp-action="Index" data-ajax="true"
+                           data-ajax-method="GET" data-ajax-mode="replace"
+                           data-ajax-update="#main-div" class="nav-link">
+                            <i class="fas fa-angle-right"></i>Class
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="Admin" asp-controller="Userrole" asp-action="Index" data-ajax="true"
+                           data-ajax-method="GET" data-ajax-mode="replace"
+                           data-ajax-update="#main-div" class="nav-link"><i class="fas fa-angle-right"></i>User</a>
+                    </li>
+                    @*     <li class="nav-item">
+                    <a href="index5.html" class="nav-link">
+                        <i class="fas fa-angle-right"></i>Teachers
+                    </a>
+                </li>*@
+                </ul>
+            </li>
+
+            @if (User.IsInRole("Admin"))
+            {
+                <li class="nav-item sidebar-nav-item">
+                    <a href="#" class="nav-link"><i class="flaticon-technological"></i><span>Manage Users and Roles</span></a>
+                    <ul class="nav sub-group-menu">
+
+                        <li class="nav-item">
+                            <a asp-area="Admin" asp-action="Index" asp-controller="UserRole" data-ajax="true"
+                               data-ajax-method="GET" data-ajax-mode="replace"
+                               data-ajax-update="#main-div" class="nav-link">
+                                <i class="fas fa-angle-right"></i>Index
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-area="Admin" asp-action="Create" asp-controller="User" data-ajax="true"
+                               data-ajax-method="GET" data-ajax-mode="replace"
+                               data-ajax-update="#main-div" class="nav-link">
+                                <i class="fas fa-angle-right"></i>Create User
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-area="Admin" asp-action="create" asp-controller="UserRole" data-ajax="true"
+                               data-ajax-method="GET" data-ajax-mode="replace"
+                               data-ajax-update="#main-div" class="nav-link">
+                                <i class="fas fa-angle-right"></i>Create User Role
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <!--<li class="nav-item sidebar-nav-item">
+        <a href="#" class="nav-link"><i class="flaticon-technological"></i><span>Manage Users</span></a>
+        <ul class="nav sub-group-menu">-->
+
+                @*   <li class="nav-item">
+                <a asp-area="Admin" asp-action="Index" asp-controller="User" data-ajax="true"
+                   data-ajax-method="GET" data-ajax-mode="replace"
+                   data-ajax-update="#main-div" class="nav-link">
+                    <i class="fas fa-angle-right"></i>Index
+                </a>
+            </li>*@
+
+
+
+
+
+
+                <!--</ul>
+        </li>-->
+
+            }
+
+            <li class="nav-item sidebar-nav-item">
+                <a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Students</span></a>
+                <ul class="nav sub-group-menu">
+                    <li class="nav-item">
+                        <a href="/admin/student/index" data-ajax="true"
+                           data-ajax-method="GET" data-ajax-mode="replace" data-ajax-loading="#loader"
+                           data-ajax-update="#main-div" class="nav-link">
+                            <i class="fas fa-angle-right"></i>All
+                            Students
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a asp-area="Admin" asp-action="Create" asp-controller="Student" data-ajax="true"
+                           data-ajax-method="GET" data-ajax-mode="replace"
+                           data-ajax-update="#main-div" class="nav-link">
+                            <i class="fas fa-angle-right"></i>Admission Form
+                        </a>
+
+
+                    </li>
+                    @*data-ajax-begin="onAjaxBegin" data-ajax-complete="onAjaxComplete" data-ajax-loading="#divLoading"*@
+
+                </ul>
+            </li>
+            <li class="nav-item sidebar-nav-item">
+                <a href="#" class="nav-link">
+                    <i class="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i><span>Class</span>
+                </a>
+                <ul class="nav sub-group-menu">
+                    <li class="nav-item">
+                        <a asp-area="Admin" asp-action="Index" asp-controller="Class" data-ajax="true"
+                           data-ajax-method="GET" data-ajax-mode="replace"
+                           data-ajax-update="#main-div" class="nav-link">
+                            <i class="fas fa-angle-right"></i>All Classes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="Admin" asp-controller="Class" asp-action="Create" data-ajax="true"
+                           data-ajax-method="GET" data-ajax-mode="replace"
+                           data-ajax-update="#main-div" class="nav-link">
+                            <i class="fas fa-angle-right"></i>Add New
+                            Class
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item sidebar-nav-item">
+                <a href="#" class="nav-link">
+                    <i class="flaticon-multiple-users-silhouette"></i><span>Teachers</span>
+                </a>
+                <ul class="nav sub-group-menu">
+                    <li class="nav-item">
+                        <a href="all-teacher.html" class="nav-link">
+                            <i class="fas fa-angle-right"></i>All
+                            Teachers
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="teacher-details.html" class="nav-link">
+                            <i class="fas fa-angle-right"></i>Teacher Details
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="add-teacher.html" class="nav-link">
+                            <i class="fas fa-angle-right"></i>Add
+                            Teacher
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="teacher-payment.html" class="nav-link">
+                            <i class="fas fa-angle-right"></i>Payment
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item sidebar-nav-item">
+                <a href="#" class="nav-link"><i class="flaticon-couple"></i><span>Parents</span></a>
+                <ul class="nav sub-group-menu">
+                    <li class="nav-item">
+                        <a href="all-parents.html" class="nav-link">
+                            <i class="fas fa-angle-right"></i>All
+                            Parents
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="parents-details.html" class="nav-link">
+                            <i class="fas fa-angle-right"></i>Parents Details
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="add-parents.html" class="nav-link">
+                            <i class="fas fa-angle-right"></i>Add
+                            Parent
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item sidebar-nav-item">
+                <a href="#" class="nav-link"><i class="flaticon-books"></i><span>Library</span></a>
+                <ul class="nav sub-group-menu">
+                    <li class="nav-item">
+                        <a href="all-book.html" class="nav-link">
+                            <i class="fas fa-angle-right"></i>All
+                            Book
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="add-book.html" class="nav-link">
+                            <i class="fas fa-angle-right"></i>Add New
+                            Book
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item sidebar-nav-item">
+                <a href="#" class="nav-link"><i class="flaticon-technological"></i><span>Account</span></a>
+                <ul class="nav sub-group-menu">
+                    <li class="nav-item">
+                        <a href="all-fees.html" class="nav-link">
+                            <i class="fas fa-angle-right"></i>All Fees
+                            Collection
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="all-expense.html" class="nav-link">
+                            <i class="fas fa-angle-right"></i>Expenses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="add-expense.html" class="nav-link">
+                            <i class="fas fa-angle-right"></i>Add
+                            Expenses
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+
+
+
+            <li class="nav-item sidebar-nav-item">
+                <a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>Routine</span></a>
+
+
+            </li>
+
+            <li class="nav-item sidebar-nav-item">
+                <a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>Routine</span></a>
+
+
+            </li>
+
+            <li class="nav-item sidebar-nav-item">
+                <a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>Routine</span></a>
+
+
+            </li>
+
+            <li class="nav-item sidebar-nav-item">
+                <a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>Routine</span></a>
+
+
+            </li>
+
+            <li class="nav-item sidebar-nav-item">
+                <a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>Routine</span></a>
+
+
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+
+
+
+<script>
+    
+    function myFunction() {
+        
+        var input, filter, ul, li, a, i, txtValue;
+
+   
+
+        input = document.getElementById("myInput");
+
+        filter = input.value.toUpperCase();
+
+        ul = document.getElementById("myUL");
+        debugger;   
+     
+        li = ul.getElementsByClassName("nav-item sidebar-nav-item")
+        for (i = 0; i < li.length; i++) {
+
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+
+@*<script>
+
+    $(document).ready(function () {
+
+        
+        $('input').keyup(function () {
+                
+                var searchText = $(this).val();
+
+                $('ul > li').each(function () {                     
+
+                    var currentLiText = $(this).text(),
+                        showCurrentLi = currentLiText.indexOf(searchText) !== -1;
+
+                    $(this).toggle(showCurrentLi);
+
+                });
+            });
+
+        });
+
+    
+</script>
+
+*@

@@ -1,0 +1,189 @@
+﻿@model UserRoleViewModel
+@{
+    var sn = 0;
+}
+
+
+<link href="~/css/FancyTable.css" rel="stylesheet" />
+<!-- Breadcubs Area Start Here -->
+<div class="breadcrumbs-area">
+    <h3>User Role</h3>
+    <ul>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>Create</li>
+    </ul>
+</div>
+<!-- Breadcubs Area End Here -->
+<!-- Account Settings Area Start Here -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="heading-layout1">
+                    <div class="item-title">
+                        <h3>Create User Role</h3>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                           aria-expanded="false">...</a>
+
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-times text-orange-red"></i>Close
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-cogs text-dark-pastel-green"></i>Edit
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-redo-alt text-orange-peel"></i>Refresh
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <form class="new-added-form" method="post" asp-area="Admin" asp-controller="UserRole" asp-action="Create">
+
+                    <div class="row col-md-12">
+                        <div class="col-md-4">
+
+                            <div class="col-md-12 form-group">
+                                <label>User Name</label>
+                                @Html.DropDownListFor(model => model.UserId, ViewBag.UserSelectList as SelectList,"Please select", new { @class = "form-control", @id = "userSelectList" })
+
+                                
+
+                        
+                                    @*<a  asp-area="Admin" asp-controller="UserRole" asp-action="Details" asp-route=UserId >Detail</a>*@
+                                    <input asp-for="UserId" hidden>
+                            </div>
+
+                        </div>
+                        <div class="col-md-8">
+
+
+                            <div>
+                                <table class="table table-bordered table-hover" id="fancytable">
+                                    <thead>
+
+                                        <tr>
+
+                                            <th>CheckBox</th>
+
+                                            <th>Roles</th>
+                                        </tr>
+                                  
+                                    </thead>
+
+                                    <tbody>
+                                        @foreach (var item in Model.RoleList)
+                                        {
+                                            <tr>
+                                                <td class="col-sm-1">
+                                                    <div class="col-sm-3">
+
+                                                        @* @Html.CheckBoxFor(model => model.RoleCheckList[sn].IsCheck)
+                                                        
+
+
+                                                        <input type="checkbox" asp-for="RoleCheckList[sn].IsCheck" checked />*@
+                                                    
+                                                        <input type="checkbox" asp-for="RoleCheckList[sn].IsCheck" data-id="@item.Id"/>
+
+                                                    </div>
+
+                                                </td>
+                                                <td class="col-sm-6">
+                                                    <div class="col-sm-3">
+
+                                                        <label>@item.Name</label>
+                                                    </div>
+                                                    <input asp-for="RoleCheckList[sn].RoleId" hidden value="@item.Id">
+
+                                                </td>
+
+                                            </tr>
+                                            sn++;
+                                        }
+
+
+
+
+
+                                    </tbody>
+
+
+
+                                </table>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+                    <button type="submit" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Submit</button>
+                    <a asp-controller="UserRole" asp-action="Index" data-ajax="true"
+                       data-ajax-method="GET" data-ajax-mode="replace"
+                       data-ajax-update="#main-div" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Back</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Account Settings Area End Here -->
+
+
+<script>
+    $(document).ready(function () {
+        $("#userSelectList").change(function () {
+
+            for (var i = 0; i < 5; i++) {
+                var idValue = $('#RoleCheckList_' + i + '__IsCheck').data("id");
+
+               
+
+                    $(`input[type="checkbox"][data-id=` + idValue + `]`).prop('checked', false)
+             
+
+              }
+            
+            var id = $('#userSelectList :selected').val();
+            $.ajax({
+                type: 'GET',
+                url: '/admin/Userrole/getRoleById/'+id,
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8;', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+
+                success: function (result) {
+                    
+                    $.each(result, function (index, value) {
+
+                        
+
+                        //$('input[type="checkbox"][data-id="249dee6b-7db0-4ffd-9fa4-33558b762b7a"]').prop('checked', true);
+
+                        for (var i = 0; i < 5; i++) {
+                            var idValue = $('#RoleCheckList_'+i+'__IsCheck').data("id");
+
+                            if (idValue == value.roleId) {
+
+                                $(`input[type="checkbox"][data-id=` + idValue + `]`).prop('checked', true)
+                            } @*else {
+                                $(`input[type="checkbox"][data-id=` + idValue + `]`).prop('checked', false)
+                            }*@
+
+                        }
+
+                        
+
+                      
+                    });     
+                    console.log(result);
+                }
+            }
+            )
+        })
+    });
+</script>

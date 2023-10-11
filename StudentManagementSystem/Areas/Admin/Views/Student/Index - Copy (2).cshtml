@@ -1,0 +1,278 @@
+﻿@model IEnumerable<StudentRecord>
+@{ ViewBag.Title = "Student List";
+    var photoPath = "";
+    int sn = 0; }
+
+@*@{ Layout = "~/Views/Shared/_layoutpartialview.cshtml"; }*@
+
+@{ Layout = ViewBag.Layout; }
+
+@*<link rel="stylesheet" href="~/akkor/css/select2.min.css">*@
+
+
+<div class="breadcrumbs-area">
+    <h3>Students</h3>
+    <ul>
+        <li>
+            <a asp-area="admin" asp-controller="student" asp-action="Index" data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace"
+                   data-ajax-update="#main-div">Home</a>
+        </li>
+        <li>@ViewBag.Title</li>
+    </ul>
+</div>
+
+<!-- Breadcubs Area End Here -->
+<!-- Student Table Area Start Here -->
+<div class="card height-auto">
+    <div class="card-body">
+        <div class="heading-layout1">
+            <div class="item-title">
+                <h3>@ViewBag.Title</h3>
+            </div>
+
+            <div>
+                <a class="btn btn-primary btn-lg" asp-area="admin" asp-controller="student" asp-action="Create" data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace"
+                   data-ajax-update="#main-div">Create</a>
+            </div>
+           
+        </div>
+
+        <div id="grid_array" style="margin:auto;"></div>
+    </div>
+
+
+</div>
+
+
+
+<!--izitoast Css-->
+<!--<link href="~/css/iziToast.css" rel="stylesheet" />
+
+<script src="~/js/iziToast.js"></script>
+<script src="~/js/iziToast.min.js"></script>-->
+
+
+@if (ViewBag.Status != null)
+{
+<script>
+
+
+    iziToast.success({
+        title: '@ViewBag.Status',
+        message: 'Successfully Deleted',
+    });
+</script>}
+
+
+@if (ViewBag.LoginStatus == true)
+{
+<script>
+
+
+    iziToast.success({
+        title: '@ViewBag.Status',
+        message: 'Login Success',
+    });
+</script>}
+
+
+
+
+
+<script>
+
+    $(function () {
+
+            @*    var tbl = $("table.tableFromModel");
+                var data = $.paramquery.tableToArray(tbl);*@
+
+        function pqDatePicker(ui) {
+            var $this = $(this);
+            $this
+                //.css({ zIndex: 3, position: "relative" })
+                .datepicker({
+                    yearRange: "-25:+0", //25 years prior to present.
+                    changeYear: true,
+                    changeMonth: true,
+                    showButtonPanel: true,
+
+                    onClose: function (evt, ui) {
+                        $(this).focus();
+                    }
+                });
+            //default from date
+   @*         $this.filter(".pq-from").datepicker("option", "defaultdate", new date("01/01/1996"));*@
+
+          @*  //default To date
+            $this.filter(".pq-to").datepicker("option", "defaultDate", new Date("12/31/1998"));*@
+
+        }
+
+
+
+
+        var obj = {
+            width: 1000, height: 500,
+            title: "Students table",
+            pageModel: { type: "remote", rPP: 20, strRpp: "{0}" },
+            numberCell: { resizable: true, title: "S.N." },
+            filterModel: { on: true, mode: "AND", header: true },
+            selectionModel: {type:'row',mode:'single'},
+            editable: false,
+            scrollModel: { autoFit: true },
+            //flexWidth: true,
+            showBottom: true,
+            resizable: true
+        };
+
+        obj.colModel = [
+            { title: "RollNo", width: 50, dataIndx: "rollNo", dataType: "integer",  filter: { type: 'textbox', condition: 'begin', listeners: ['keyup'] } },
+            {
+                title: "Photo", width: 40, dataIndx: "photoPath", dataType: "image"
+            },
+            { title: "Name", width: 75, dataIndx: "concatName", dataType: "string", filter: { type: 'textbox', condition: 'begin', listeners: ['keyup'] } },
+            { title: "Address", width: 75, dataIndx: "address", dataType: "string", filter: { type: 'textbox', condition: 'begin', listeners: ['keyup'] }},
+            { title: "Class", width: 75, dataIndx: "class", dataType: "int", filter: { type: 'textbox', condition: 'begin', listeners: ['keyup'] }},
+            {
+                title: "BloodGroup", width: 75, dataIndx: "bloodGroup", dataType: "string",
+                render: function (ui) {
+
+
+                    switch (ui.cellData) {
+
+                        case 1:
+                            return "APositive";
+                        case 2:
+                            return "ANegative";
+                        case 3:
+                            return "BPositive";
+                        case 4:
+                            return "BNegative";
+                        case 5:
+                            return "ABPositive";
+                        case 6:
+                            return "ABNegative";
+                        case 7:
+                            return "OPositive";
+                        case 8:
+                            return "ONegative";
+
+                    }
+                },
+
+                filter: {
+                    type: "select",
+                    condition: 'equal',
+                    prepend: { 1: "APositive", 2: "ANegative", 3: "BPositive", 4: "BNegative", 5: "ABPositive", 6: "ABNegative", 7: "OPositive", 8: "ONegative", '0': '--Select--' },
+                    valueIndx: "gender",
+                    labelIndx: "gender",
+                    listeners: ['change']
+                }
+
+
+
+            },
+
+            { title: "MobileNumber", width: 75, dataIndx: "mobileNumber", dataType: "string", filter: { type: 'textbox', condition: 'begin', listeners: ['keyup'] }},
+            {
+                title: "Birthdate", width: 75, dataIndx: "birthDate", dataType: "Datetime", init: pqDatePicker, filter: { type: 'textbox', condition: 'begin', init: pqDatePicker, listeners: ['change'] }, render: function (val) {
+
+                    //return ui.cellData.format("YYYY-MM-DD");
+
+                    @*var t = val.cellData.substr(0, 10);*@
+                    //display format different from data format (optional).
+                    return $.datepicker.formatDate("M dd, yy", new Date(val.cellData));
+
+                }
+
+            },
+            {
+                title: "Gender", width: 75, dataIndx: "gender", dataType: "string", render: function (ui) {
+
+                    if (ui.cellData == 1) {
+                        return "Male";
+                    }
+                    else if (ui.cellData == 2) {
+                        return "Female";
+                    }
+                    else if (ui.cellData == 3) {
+                        return "Others";
+                    }
+
+                },
+
+                filter: {
+                    type: "select",
+                    condition: 'equal',
+                    prepend: { 0: '--Select--', 1: "Male", 2: "Female", 3: "Others"},
+                    valueIndx: "gender",
+                    labelIndx: "gender",
+                    listeners: ['change']
+                }
+            },
+
+            {
+                title: "Action", editable: false, minWidth: 83, sortable: false,
+                render: function (ui) {
+
+
+                    var link = `<a href='/Admin/Student/Edit/${ui.rowData.id}' data-ajax="true"
+                           data-ajax-method="GET" data-ajax-mode="replace"
+                           data-ajax-update="#main-div" class='edit_btn'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+</svg></a>
+
+
+<a href='/Admin/Student/details/${ui.rowData.id}' data-ajax="true"
+                           data-ajax-method="GET" data-ajax-mode="replace"
+                           data-ajax-update="#main-div" class='details_btn' ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark" viewBox="0 0 16 16">
+  <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+</svg></button > <a href='/Admin/Student/Delete/${ui.rowData.id}' data-ajax="true"
+                           data-ajax-method="GET" data-ajax-mode="replace"
+                           data-ajax-update="#main-div" class='delete_btn'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+  <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+  <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+</svg></a>`;
+
+
+                    return link;
+
+                }
+            }
+          
+        ];
+        obj.dataModel = {
+            postData: null,
+            location: "remote",
+            dataType: "Json",
+            method: "Get",
+            url: "/admin/student/GridIndexData",
+            getData: function (gridIndexData) {
+
+                return { curPage: gridIndexData.curPage, totalRecords: gridIndexData.totalRecords, data: gridIndexData.dataRow };
+            }
+
+        };
+
+      
+       
+
+
+
+
+
+
+        var $grid = $("#grid_array").pqGrid(obj);
+
+        $grid.pqGrid('option', 'width', 'auto')
+            .pqGrid('refresh');
+
+
+    });
+
+
+
+
+</script>
+

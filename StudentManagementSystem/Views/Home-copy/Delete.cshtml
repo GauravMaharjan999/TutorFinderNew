@@ -1,0 +1,75 @@
+﻿@model EmployeeViewModel
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+
+<script src="~/lib/jquery/jquery.js"></script>
+<script src="~/lib/jquery/jquery.min.js"></script>
+
+
+
+<form asp-controller="home" asp-action="delete" method="post" class="mt-3">
+    <input asp-for="Id" hidden />
+    <div class="panel panel-default">
+        <div class="panel-heading text-center" style="margin-bottom:10px"><h1>Delete Employee</h1></div>
+
+
+        <div class="panel-body">
+            <div class="form-group row">
+                <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Name" class="form-control" placeholder="Name" readonly>
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <label asp-for="Email" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Email" class="form-control" placeholder="Email" readonly>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Department" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Department" class="form-control" placeholder="Department" readonly>
+                </div>
+                <span asp-validation-for="Department" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group row">
+                <div class="col-sm-2">
+                    Gender
+                </div>
+
+                <div class="col-sm-10">
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optradio">Male
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optradio">Female
+                        </label>
+                    </div>
+                    <div class="form-check-inline disabled">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optradio">Others
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <a asp-controller="home" asp-action="delete" class="btn btn-danger">Delete</a>
+        <a asp-controller="home" asp-action="index" class="btn btn-primary">Back</a>
+    </div>
+
+
+</form>

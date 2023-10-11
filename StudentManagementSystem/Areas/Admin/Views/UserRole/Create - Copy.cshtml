@@ -1,0 +1,63 @@
+﻿@model UserRoleViewModel
+@{
+    var sn = 0;
+}
+<link href="~/css/FancyTable.css" rel="stylesheet" />
+
+<form method="post" asp-area="Admin" asp-controller="UserRole" asp-action="Create">
+    <br /><br />
+    <div class="col-xl-3 col-lg-6 col-12 form-group" style="width:200%">
+        @Html.DropDownListFor(model => model.UserId, ViewBag.UserSelectList as SelectList, new { @class = "form-control" })
+        @*<a  asp-area="Admin" asp-controller="UserRole" asp-action="Details" asp-route=UserId >Detail</a>*@
+        <input asp-for="UserId" hidden>
+    </div>
+    <h3>Role</h3>`
+
+    <div>
+        <table class="table table-bordered table-hover" id="fancytable">
+            <thead>
+                <th>
+                    CheckBox
+                </th>
+
+                <th>Roles</th>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model.RoleList)
+                {
+                    <tr>
+                        <td class="col-sm-1" >
+                            <div class="col-sm-3">
+
+                                @Html.CheckBoxFor(model => model.RoleCheckList[sn].IsCheck)
+                            </div>
+
+                        </td>
+                        <td class="col-sm-6">
+                            <div class="col-sm-3">
+
+                                <label>@item.Name</label>
+                            </div>
+                            <input asp-for="RoleCheckList[sn].RoleId" hidden value="@item.Id">
+
+                        </td>
+
+                    </tr>
+                    sn++;
+                }
+
+
+
+
+
+            </tbody>
+
+
+
+        </table>
+    </div>
+
+    <button type="submit" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Submit</button>
+
+</form>

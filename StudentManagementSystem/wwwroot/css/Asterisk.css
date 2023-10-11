@@ -1,0 +1,9 @@
+﻿.btn{
+    width:75px;
+}
+
+.ast::before {
+    content: "*";
+    color: red;
+    float: right;
+}

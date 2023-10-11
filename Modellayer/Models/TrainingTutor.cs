@@ -7,52 +7,53 @@ using System.Text;
 
 namespace Modellayer.Models
 {
-    [Table("TrainingTutor")]
-   public  class TrainingTutor
-    {
-        [Key]
-        public int Id { get; set; }
+	public class TrainingTutor
+	{
+		[Key]
+		public int Id { get; set; }
 
-        [Required]
-        public string Name { get; set; }
+		[Required]
+		public string Name { get; set; }
 
-        public string Email { get; set; }
-        public string ProfileImagePath { get; set; }
-        public string MobileNo { get; set; }
-        public string ShortBio { get; set; }
-        public string Bio { get; set; }
-        public string Address { get; set; }
-        public string Experience { get; set; }
-        public string Expertise { get; set; }
-        public string LinkedInLink { get; set; }
-        public bool IsShowOnHomePage { get; set; }
-        public int AddedBy { get; set; }
+		public string Email { get; set; }
+		public string ProfileImagePath { get; set; }
+		public string MobileNo { get; set; }
+		public string ShortBio { get; set; }
+		public string Bio { get; set; }
+		public string Address { get; set; }
+		public string Experience { get; set; }
+		public string Expertise { get; set; }
+		public string LinkedInLink { get; set; }
+		public bool IsShowOnHomePage { get; set; }
 
-        
-        public DateTime AddedOn { get; set; }
+		//[IgnoreUpdate]
+		//public int AddedBy { get; set; }
 
-        
-        public int ModifiedBy { get; set; }
+		//[IgnoreUpdate]
+		//public DateTime AddedOn { get; set; }
 
-        
-        public DateTime? ModifiedOn { get; set; }
+		//[IgnoreInsert]
+		//public int ModifiedBy { get; set; }
 
-        public bool IsActive { get; set; }
-        public bool IsDeleted { get; set; }
-        
-        public int DeletedBy { get; set; }
-        
-        public DateTime? DeletedOn { get; set; }
+		//[IgnoreInsert]
+		//public DateTime? ModifiedOn { get; set; }
 
-        
-        public IFormFile ProfileImageAttachment { get; set; }
+		//public bool IsActive { get; set; }
+		//public bool IsDeleted { get; set; }
+		//[IgnoreInsert]
+		//public int DeletedBy { get; set; }
+		//[IgnoreInsert]
+		//public DateTime? DeletedOn { get; set; }
 
-        
-        public IFormFile EditProfileImageAttachment { get; set; }
+		//[IgnoreAll]
+		//public IFormFile ProfileImageAttachment { get; set; }
 
-        
-        public int RowTotal { get; set; }
+		//[IgnoreAll]
+		//public IFormFile EditProfileImageAttachment { get; set; }
 
-        public int IdentityUserId { get; set; }
-    }
+		//[IgnoreAll]
+		//public int RowTotal { get; set; }
+
+		//public int IdentityUserId { get; set; }
+	}
 }

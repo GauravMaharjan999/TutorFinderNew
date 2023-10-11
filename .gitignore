@@ -325,3 +325,13 @@ Migrations/
 
 # Visual Studio Code launch.json and task.json
 .vscode/
+
+# Ignore files in the bin and obj directories
+bin/
+obj/
+
+# Ignore the .vs directory
+.vs/
+
+# Ignore files in the razor directory
+razor/

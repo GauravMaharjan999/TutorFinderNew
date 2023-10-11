@@ -92,6 +92,8 @@ namespace StudentManagement
             services.AddScoped<IClassBL, ClassBL>();
             services.AddScoped<IEmailSender, EmailSender>();
             services.AddScoped<ICourseBL, CourseBL>();
+            services.AddScoped<IStudentRecordBL, StudentRecordBL>();
+            services.AddScoped<ITutorBL, TutorBL>();
             services.AddToastNotification();
 
 

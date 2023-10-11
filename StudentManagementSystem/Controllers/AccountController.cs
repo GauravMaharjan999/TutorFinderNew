@@ -162,16 +162,8 @@ namespace StudentManagement.Controllers
 
                         ViewBag.LoginStatus = true;
 
-                        //await task;
+                        return new DataResult { Message = "Success", ResultType = ResultTypeEnum.Success };
 
-                        //return RedirectToAction("Index", "Dashboard", new { area = "Admin" });
-                        return new DataResult { Message = "Success", ResultType = ResultTypeEnum.Failed };
-
-                        //var path = "/admin/student/index";
-                        //return base.Redirect(path);
-                        //need to define route in respective controller
-
-                        //return RedirectToAction("index", "student");
                     }
                     else
                     {
@@ -261,7 +253,16 @@ namespace StudentManagement.Controllers
             await signInManager.SignOutAsync();
             return RedirectToAction("Login");
         }
-        [HttpGet]
+
+		[HttpPost]
+		[AllowAnonymous]
+		public async Task<DataResult> LogoutforAjax()
+		{
+			await signInManager.SignOutAsync();
+			return new DataResult { Message = "Success", ResultType = ResultTypeEnum.Success };
+
+		}
+		[HttpGet]
         [AllowAnonymous]
         public IActionResult ForgotPassword()
         {

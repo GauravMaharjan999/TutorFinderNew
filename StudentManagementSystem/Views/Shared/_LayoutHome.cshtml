@@ -1,4 +1,10 @@
-﻿
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@{
+
+	var userName = User.Identity.Name;
+
+}
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <!-- Copied from https://grandetest.com/theme/edumy-html/index.html by Cyotek WebCopy 1.7.0.600, Saturday, September 28, 2019, 3:22:19 AM -->
@@ -13,7 +19,11 @@
 	<link rel="stylesheet" href="~/default/css/bootstrap.min.css">
 	<link rel="stylesheet" href="~/default/css/style.css">
 	<!-- Responsive stylesheet -->
-	<link rel="stylesheet" href="~/default/css/responsive.css">
+    <link rel="stylesheet" href="~/default/css/responsive.css">
+    <link href="~/css/izitoast.min.css" rel="stylesheet" />
+    <link href="~/css/izitoast.css" rel="stylesheet" />
+	<script src="~/js/izitoast.min.js"></script>
+	<script src="~/js/izitoast.js"></script>
 	<!-- Title -->
 	<title>Edumy - LMS Online Education Course & School HTML Template</title>
 	<!-- Favicon -->
@@ -57,7 +67,10 @@
 							<a href="Home"><span class="title">Home</span></a>
 						</li>
 						<li>
-							<a href="Course"><span class="title">Courses</span></a>
+							<a asp-area="" asp-controller="Course"><span class="title">Courses</span></a>
+						</li>
+						<li>
+							<a asp-area="" asp-controller="Tutor"><span class="title">Tutor</span></a>
 						</li>
 						<li>
 							<a href="#"><span class="title">Events</span></a>
@@ -74,7 +87,16 @@
 						</li>
 					</ul>
 					<ul class="sign_up_btn pull-right dn-smd mt20">
-						<li class="list-inline-item list_s"><a href="#" class="btn flaticon-user" data-toggle="modal" data-target="#exampleModalCenter"> <span class="dn-lg">Login/Register</span></a></li>
+						@if (SignInManager.IsSignedIn(User))
+						{
+							<a href="javascript:void(0)" id="btnLogout">Logout</a>
+
+						}
+						else
+						{
+							<li class="list-inline-item list_s"><a href="#" class="btn flaticon-user" data-toggle="modal" data-target="#exampleModalCenter"> <span class="dn-lg">Login/Register</span></a></li>
+
+						}
 						<li class="list-inline-item list_s">
 							<div class="cart_btn">
 								<ul class="cart">
@@ -150,17 +172,19 @@
 										<p class="text-center">Don't have an account? <a class="text-thm" href="#">Sign Up!</a></p>
 									</div>
 									<div class="form-group">
-										<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email Address">
+										<input type="email" class="form-control" id="EmailLogin" placeholder="Email Address">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+										<input type="password" class="form-control" id="PasswordLogin" placeholder="Password">
 									</div>
+
+									<span id="loginalerttext" style=" color:red"></span>
 									<div class="form-group custom-control custom-checkbox">
 										<input type="checkbox" class="custom-control-input" id="exampleCheck1">
-										<label class="custom-control-label" for="exampleCheck1">Remember me</label>
+										<label class="custom-control-label" id="RememberMe" for="RememberMe">Remember me</label>
 										<a class="tdu btn-fpswd float-right" href="#">Forgot Password?</a>
 									</div>
-									<button type="submit" class="btn btn-log btn-block btn-thm2">Login</button>
+									<button type="button" id="loginsubmit" class="btn btn-log btn-block btn-thm2">Login</button>
 									<hr>
 									<div class="row mt40">
 										<div class="col-lg">
@@ -354,6 +378,127 @@
 			</nav>
 		</div>
 		@RenderBody()
+
+		<!-- Our Footer -->
+		<section class="footer_one">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-md-4 col-md-3 col-lg-3">
+						<div class="footer_contact_widget">
+							<h4>CONTACT</h4>
+							<p>329 Queensberry Street, North Melbourne </p>
+							<p>VIC 3051, Australia.</p>
+							<p>123 456 7890</p>
+							<p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="94e7e1e4e4fbe6e0d4f1f0e1f9edbaf7fbf9">[email&#160;protected]</a></p>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
+						<div class="footer_company_widget">
+							<h4>COMPANY</h4>
+							<ul class="list-unstyled">
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="page-contact.html">Contact</a></li>
+								<li><a href="#">Become a Teacher</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
+						<div class="footer_program_widget">
+							<h4>PROGRAMS</h4>
+							<ul class="list-unstyled">
+								<li><a href="#">Nanodegree Plus</a></li>
+								<li><a href="#">Veterans</a></li>
+								<li><a href="#">Georgia</a></li>
+								<li><a href="#">Self-Driving Car</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
+						<div class="footer_support_widget">
+							<h4>SUPPORT</h4>
+							<ul class="list-unstyled">
+								<li><a href="#">Documentation</a></li>
+								<li><a href="#">Forums</a></li>
+								<li><a href="#">Language Packs</a></li>
+								<li><a href="#">Release Status</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6 col-md-3 col-lg-3">
+						<div class="footer_apps_widget">
+							<h4>MOBILE</h4>
+							<div class="app_grid">
+								<button class="apple_btn btn-dark">
+									<span class="icon">
+										<span class="flaticon-apple"></span>
+									</span>
+									<span class="title">App Store</span>
+									<span class="subtitle">Available now on the</span>
+								</button>
+								<button class="play_store_btn btn-dark">
+									<span class="icon">
+										<span class="flaticon-google-play"></span>
+									</span>
+									<span class="title">Google Play</span>
+									<span class="subtitle">Get in on</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Our Footer Middle Area -->
+		<section class="footer_middle_area p0">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-md-3 col-lg-3 col-xl-2 pb15 pt15">
+						<div class="logo-widget home1">
+							<img class="img-fluid" src="~/default/images/header-logo.png" alt="header-logo.png">
+							<span>EDUMY</span>
+						</div>
+					</div>
+					<div class="col-sm-8 col-md-5 col-lg-6 col-xl-6 pb25 pt25 brdr_left_right">
+						<div class="footer_menu_widget">
+							<ul>
+								<li class="list-inline-item"><a href="#">Home</a></li>
+								<li class="list-inline-item"><a href="#">Privacy</a></li>
+								<li class="list-inline-item"><a href="#">Terms</a></li>
+								<li class="list-inline-item"><a href="#">Sitemap</a></li>
+								<li class="list-inline-item"><a href="#">Purchase</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-4 col-lg-3 col-xl-4 pb15 pt15">
+						<div class="footer_social_widget mt15">
+							<ul>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-google"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Our Footer Bottom Area -->
+		<section class="footer_bottom_area pt25 pb25">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 offset-lg-3">
+						<div class="copyright-widget text-center">
+							<p>Copyright Edumy © 2019. All Rights Reserved.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<a class="scrollToHome" href="#"><i class="flaticon-up-arrow-1"></i></a>
 	</div>
 	<!-- Wrapper End -->
@@ -375,7 +520,8 @@
 	<script type="text/javascript" src="~/default/js/wow.min.js"></script>
 	<script type="text/javascript" src="~/default/js/progressbar.js"></script>
 	<script type="text/javascript" src="~/default/js/slider.js"></script>
-	<script type="text/javascript" src="~/default/js/timepicker.js"></script>
+    <script type="text/javascript" src="~/default/js/timepicker.js"></script>
+
 	<!-- Custom script for all pages -->
 	<script type="text/javascript" src="~/default/js/script.js"></script>
 </body>
@@ -386,10 +532,10 @@
 	$('#loginsubmit').on('click', function () {
 		debugger;	
 		var returnUrl = $(location).attr("href");
-		var model = { Email: "", Password: "" }
+		var model = { Email: "", Password: "", RememberMe: true }
 
-		model.Email = $("#Email").val();
-		model.Password = $("#Password").val();
+		model.Email = $("#EmailLogin").val();
+		model.Password = $("#PasswordLogin").val();
 		if (model.Email == "") {
 			$("#loginalerttext").text("* Please Enter Email");
 			return false;
@@ -400,29 +546,69 @@
 			return false;
 
 		}
-		//  model.RememberMe = ($('input[name="remembermecheck"]').is(":checked"));
+		model.RememberMe = ($('#RememberMe').is(":checked"));
 
 		$.ajax({
 			type: "POST",
 			url: "/Account/LoginPost",
-			dataType: "json",
-			contentType: "application/json; charset=utf-8",
-			data: JSON.stringify(model),
+			data: model,
 
 			success: function (res) {
 
 				debugger;
-				if (res.Message == "Success") {
+				if (res.message == "Success") {
+					iziToast.success({
+						title: 'OK',
+						message: 'Login Successful',
+					});
 					window.location.href = returnUrl;
-					setInterval('location.reload()', 500);
+					setInterval('location.reload()', 1000);
 				}
-				else if (res.Message == "Incorrect") {
+				else if (res.message == "Incorrect") {
 					$("#loginalerttext").text("* Incorrect Email or Password");
+					iziToast.error({
+						title: 'OK',
+						message: 'Login Failed',
+					});
 					window.location.href = "#";
+
 				}
 			},
 			error: function (res) {
-				if (res.Message == "Exception") {
+				if (res.message == "Exception") {
+					alert("Error!!! Please Try Again Later!!! !!!");
+					return false;
+				}
+			}
+		});
+	});
+	$('#btnLogout').on('click', function () {
+		$.ajax({
+			type: "POST",
+			url: "/Account/LogoutforAjax",
+
+			success: function (res) {
+
+				debugger;
+				if (res.message == "Success" || res.resultType==1) {
+					iziToast.success({
+						title: 'OK',
+						message: 'Logout Successful',
+					});
+					window.location.href = returnUrl;
+					setInterval('location.reload()', 1000);
+				}
+				else {
+					iziToast.error({
+						title: 'OK',
+						message: 'Logout Failed',
+					});
+					window.location.href = "#";
+
+				}
+			},
+			error: function (res) {
+				if (res.message == "Exception") {
 					alert("Error!!! Please Try Again Later!!! !!!");
 					return false;
 				}

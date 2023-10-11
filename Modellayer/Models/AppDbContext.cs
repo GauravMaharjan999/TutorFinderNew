@@ -19,6 +19,7 @@ namespace Modellayer.Models
         public DbSet<StudentAcademic> StudentAcademic { get; set; }
         public DbSet<Class> Class { get; set; }
 		public DbSet<TrainingCourse> TrainingCourse { get; set; }
+		public DbSet<TrainingTutor> TrainingTutor { get; set; }
 
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)

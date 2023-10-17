@@ -20,6 +20,7 @@ namespace Modellayer.Models
         public DbSet<Class> Class { get; set; }
 		public DbSet<TrainingCourse> TrainingCourse { get; set; }
 		public DbSet<TrainingTutor> TrainingTutor { get; set; }
+		public DbSet<TrainingCourseCategory> TrainingCourseCategory { get; set; }
 
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)

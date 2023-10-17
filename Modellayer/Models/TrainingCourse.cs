@@ -36,5 +36,9 @@ namespace Modellayer.Models
         public TrainingCourse Course { get; set; }
         public TrainingTutor TrainingTutor { get; set; }
         public IEnumerable<CourseSyllabus> CourseSyllabus { get; set; }
+        public List<CourseLevel> CourseLevelList { get; set; }
+        public List<TrainingCourseCategory> TrainingCourseCategoryList { get; set; }
+        public IFormFile ProfileImage { get; set; }
+        public IFormFile CoverImage { get; set; }
     }
 }

@@ -1,0 +1,161 @@
+﻿@model CourseDetailViewModel
+@{
+    var TrainingCourseCategoryList = Model.TrainingCourseCategoryList.Select(x => new SelectListItem
+            {
+                Value = x.Id.ToString(),
+                Text = x.Name,
+            });
+    var CourseLevelList = Model.CourseLevelList.Select(x => new SelectListItem
+            {
+                Value = x.Id.ToString(),
+                Text = x.Name,
+            });
+}
+<div class="page-wrapper">
+    <div class="content container-fluid">
+
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col-sm-12">
+                    <div class="page-sub-header">
+                        <h3 class="page-title">Add Students</h3>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="students.html">Student</a></li>
+                            <li class="breadcrumb-item active">Add Students</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card comman-shadow">
+                    <div class="card-body">
+                        <form enctype="multipart/form-data" method="post" asp-controller="course" asp-action="Edit">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="form-title student-info">Student Information <span><a href="javascript:;"><i class="feather-more-vertical"></i></a></span></h5>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <div class="form-group local-forms">
+
+                                        <label asp-for="Course.CategoryId">Course Category*</label>
+                                        <select class="form-control select" asp-for="Course.CategoryId" class="custom-select select2"
+                                                asp-items="TrainingCourseCategoryList"></select>
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <div class="form-group local-forms">
+                                        <label asp-for="Course.Name">Course Name<span class="login-danger">*</span></label>
+                                        <input asp-for="Course.Name" class="form-control" type="text" placeholder="Enter First Name">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <div class="form-group local-forms">
+
+                                        <label asp-for="Course.CourseLevel">Course level *</label>
+                                        <select class="form-control select" asp-for="Course.CourseLevel" class="custom-select select2"
+                                                asp-items="CourseLevelList"></select>
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <div class="form-group local-forms">
+                                        <label asp-for="Course.Duration">Duration<span class="login-danger">*</span></label>
+                                        <input asp-for="Course.Duration" class="form-control" type="number" placeholder="Enter Duration">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <div class="form-group local-forms">
+                                        <label asp-for="Course.Tags">Tags<span class="login-danger">*</span></label>
+                                        <input asp-for="Course.Tags" class="form-control" type="number" placeholder="Enter Tags">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-4">
+                                    <div class="form-group local-forms">
+                                        <label>Short Description </label>
+                                        <textarea asp-for="Course.ShortDescription" rows="5" cols="5" class="form-control" placeholder="Enter text here"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <div class="form-group local-forms">
+                                        <label>Description </label>
+                                        <textarea asp-for="Course.Description" rows="5" cols="5" class="form-control tinymce" placeholder="Enter text here"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <div class="form-group local-forms">
+                                        <label asp-for="Course.CourseFee">Course Fee<span class="login-danger">*</span></label>
+                                        <input asp-for="Course.CourseFee" class="form-control" type="number" placeholder="Enter Course Fee">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <div class="form-group local-forms">
+                                        <label asp-for="Course.Tags">Duration<span class="login-danger">*</span></label>
+                                        <input asp-for="Course.Tags" class="form-control" type="text" placeholder="Enter Tags">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <div class="form-group local-forms">
+                                        <label>PreRequisites </label>
+                                        <textarea asp-for="Course.PreRequisites" rows="5" cols="5" class="form-control tinymce" placeholder="Enter text here"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <div class="form-group local-forms">
+                                        <label asp-for="Course.IntroVideoPath">Into Video Link<span class="login-danger">*</span></label>
+                                        <input asp-for="Course.IntroVideoPath" class="form-control" type="text" placeholder="Enter Into Video Link">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 col-sm-4">
+                                    <div class="form-group local-forms">
+                                        <label asp-for="ProfileImage">Profile Image<span class="login-danger">*</span></label>
+                                        <input asp-for="ProfileImage" class="form-control" type="file">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <div class="form-group local-forms">
+                                        <label asp-for="CoverImage">Cover Image<span class="login-danger">*</span></label>
+                                        <input asp-for="CoverImage" class="form-control" type="file">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <div class="student-submit">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/tinymce/js/tinymce/tinymce.js"></script>
+<script src="~/tinymce/js/tinymce/tinymce.min.js"></script>
+<script>
+
+    tinymce.init({
+        selector: 'textarea.tinymce',
+        height: 500,
+        plugins: [
+            'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+            'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+            'insertdatetime', 'media', 'table', 'help', 'wordcount'
+        ],
+        toolbar: 'undo redo | blocks | ' +
+            'bold italic backcolor | alignleft aligncenter ' +
+            'alignright alignjustify | bullist numlist outdent indent | ' +
+            'removeformat | help',
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+    });
+</script>
+

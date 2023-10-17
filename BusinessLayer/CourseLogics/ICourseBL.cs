@@ -11,7 +11,12 @@ namespace BusinessLayer.StudentLogics
     public interface ICourseBL
     {
         Task<List<TrainingCourse>> GetAllCourses();
-        Task<TrainingCourse> GetCourseById(int id);
+        Task<CourseDetailViewModel> GetCourseById(int id);
+        Task<DataResult> AddCourse(CourseDetailViewModel model);
+        CourseDetailViewModel GetRequiredListToCreateCouse(CourseDetailViewModel model);
+        Task<DataResult> EditCourse(CourseDetailViewModel model);
 
-	}
+
+
+    }
 }

@@ -14,6 +14,9 @@ namespace BusinessLayer.BaseRepository
         Task<DataResult> Add<T1>(T1 model) where T1 : class;
         Task<DataResult> UpdateModel<T1>(T1 model) where T1 : class;
         Task<DataResult> UpdateModelDetails<T1, T2>(T1 model, T2[] model2) where T1 : class where T2 : class;
+        Task<DataResult> Remove<T1>(int Id) where T1 : class;
+
+
 
 
 
@@ -29,6 +32,7 @@ namespace BusinessLayer.BaseRepository
      
         Task<T1> Delete<T1>(int Id) where T1 : class;
         Task<int> GetListCount<T1>() where T1 : class;
+
 
     }
 }

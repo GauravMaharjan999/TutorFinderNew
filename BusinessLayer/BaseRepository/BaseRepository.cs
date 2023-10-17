@@ -164,6 +164,23 @@ namespace BusinessLayer.BaseRepository
             context.SaveChanges();
             return model;
         }
+        public virtual async Task<DataResult> Remove<T1>(int Id) where T1 : class
+        {
+
+            try
+            {
+                var model = await GetDataById<T1>(Id);
+                context.Set<T1>().Remove(model);
+                context.SaveChanges();
+                return new DataResult { ResultType = ResultTypeEnum.Success, Message = "Data Removed Successfully" };
+            }
+            catch (Exception ex)
+            {
+
+                return new DataResult { ResultType = ResultTypeEnum.Exception, Message = ex.Message.ToString() };
+            }
+           
+        }
 
 
 
